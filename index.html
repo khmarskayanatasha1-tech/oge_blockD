@@ -63,13 +63,10 @@
         /* --- ШАПКА (NAVIGATION) --- */
         header {
             background-color: var(--olive-green);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
             border-bottom: 4px solid var(--vintage-gold);
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-
+        
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -551,7 +548,7 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
-            top: 80px; /* Отступ от верхнего меню */
+            top: 0; /* Отступ от верхнего меню */
             z-index: 100;
         }
         .color-btn {
@@ -1422,6 +1419,19 @@
             overflow-y: auto;
             border: 1px solid #eee;
         }
+                /* --- ВЕРХНЕУРОВНЕВЫЕ ВКЛАДКИ --- */
+        .tab-section {
+            display: none;
+        }
+        .tab-section.active-tab {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        nav a.active-nav {
+            background-color: rgba(255,255,255,0.15);
+            border-color: var(--vintage-gold);
+            color: var(--pasta-yellow);
+        }
 </style>
 </head>
 <body>
@@ -1432,24 +1442,25 @@
             <div class="logo">Nonna<span>maxxing</span></div>
             <nav>
                 <ul>
-                    <li><a href="#home">🏠 Главная</a></li>
-                    <li><a href="#vocab">📚 Лексика</a></li>
-                    <li><a href="#listening">🎧 Аудирование</a></li>
-                    <li><a href="#reading">📖 Чтение</a></li>
-                    <li><a href="#grammar">📝 Грамматика</a></li>
-                    <li><a href="#wordformation">🧩 Словообразование</a></li>
-                    <li><a href="#writing">✉️ Письмо</a></li>
-                    <li><a href="#speaking">🎭 Говорение</a></li>
-                    <li><a href="#review">🔄 Review</a></li>
-                    <li><a href="#checklist">✅ Чек-лист</a></li>
-                    <li><a href="#homework">📂 Домашка</a></li>
+                    <li><a href="#home" onclick="showTab('home', this); return false;">🏠 Главная</a></li>
+                    <li><a href="#vocab" onclick="showTab('vocab', this); return false;">📚 Лексика</a></li>
+                    <li><a href="#listening" onclick="showTab('listening', this); return false;">🎧 Аудирование</a></li>
+                    <li><a href="#reading" onclick="showTab('reading', this); return false;">📖 Чтение</a></li>
+                    <li><a href="#grammar" onclick="showTab('grammar', this); return false;">📝 Грамматика</a></li>
+                    <li><a href="#wordformation" onclick="showTab('wordformation', this); return false;">🧩 Словообразование</a></li>
+                    <li><a href="#writing" onclick="showTab('writing', this); return false;">✉️ Письмо</a></li>
+                    <li><a href="#speaking" onclick="showTab('speaking', this); return false;">🎭 Говорение</a></li>
+                    <li><a href="#review" onclick="showTab('review', this); return false;">🔄 Review</a></li>
+                    <li><a href="#checklist" onclick="showTab('checklist', this); return false;">✅ Чек-лист</a></li>
+                    <li><a href="#homework" onclick="showTab('homework', this); return false;">📂 Домашка</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- ОСНОВНОЙ КОНТЕНТ -->
-    <main class="container" id="home">
+    <main class="container">
+        <section id="home" class="tab-section active-tab">
         
         <!-- СЕКЦИЯ HERO -->
         <section class="hero">
@@ -1537,8 +1548,9 @@
 
         <!-- НИЖНЯЯ КАРТИНКА -->
         <img src="https://drive.google.com/thumbnail?id=1kD4pQ1Ecmpo-rVuq-X4yNenxGL8kJ4kK&sz=w1200" alt="Italian Table Aesthetics" class="bottom-image">
+        </section>
         <!-- ================= СЕКЦИЯ ЛЕКСИКА ================= -->
-        <section id="vocab" class="container">
+        <section id="vocab" class="container tab-section">
             <h2 class="section-title">📚 Vocabulary (Лексика)</h2>
             
             <div class="quizlet-box">
@@ -1619,7 +1631,7 @@
         </section>
 
         <!-- ================= СЕКЦИЯ АУДИРОВАНИЕ ================= -->
-        <section id="listening" class="container">
+        <section id="listening" class="container tab-section">
             <h2 class="section-title">🎧 Listening (Аудирование)</h2>
 
             <!-- Task 1 -->
@@ -1716,7 +1728,7 @@
 
         </section>
         <!-- ================= СЕКЦИЯ ЧТЕНИЕ ================= -->
-        <section id="reading" class="container">
+        <section id="reading" class="container tab-section">
             <h2 class="section-title">📖 Reading (Чтение)</h2>
 
             <!-- Инструкция по выделению -->
@@ -1950,7 +1962,7 @@
 
         </section>
         <!-- ================= СЕКЦИЯ ГРАММАТИКА ================= -->
-        <section id="grammar" class="container">
+        <section id="grammar" class="container tab-section">
             <h2 class="section-title">📝 Grammar (Грамматика)</h2>
 
             <!-- Навигация по темам -->
@@ -2170,7 +2182,7 @@
 
         </section>
         <!-- ================= СЕКЦИЯ СЛОВООБРАЗОВАНИЕ ================= -->
-        <section id="wordformation" class="container">
+        <section id="wordformation" class="container tab-section">
             <h2 class="section-title">🧩 Word Formation (Словообразование)</h2>
 
             <div class="theory-box">
@@ -2217,7 +2229,7 @@
         </section>
 
         <!-- ================= СЕКЦИЯ ПИСЬМО ================= -->
-        <section id="writing" class="container">
+        <section id="writing" class="container tab-section">
             <h2 class="section-title">✉️ Writing (Письмо)</h2>
 
             <!-- Справочный блок -->
@@ -2318,7 +2330,7 @@
 
         </section>
         <!-- ================= СЕКЦИЯ ГОВОРЕНИЕ ================= -->
-        <section id="speaking" class="container">
+        <section id="speaking" class="container tab-section">
             <h2 class="section-title">🎭 Speaking (Говорение)</h2>
 
             <!-- Главные вкладки -->
@@ -2812,7 +2824,7 @@
         </section> <!-- Конец секции Speaking -->
 
         <!-- ================= СЕКЦИЯ REVIEW ================= -->
-        <section id="review" class="container">
+        <section id="review" class="container tab-section">
             <h2 class="section-title">🔄 Review (Проверочная работа)</h2>
             
             <div class="review-info">
@@ -3037,7 +3049,7 @@
         </section>
 
         <!-- ================= СЕКЦИЯ ЧЕК-ЛИСТ ================= -->
-        <section id="checklist" class="container">
+        <section id="checklist" class="container tab-section">
             <div class="checklist-wrapper">
                 <h2 class="checklist-title">🌟 ЧЕК-ЛИСТ ПО БЛОКУ Г 🌟</h2>
                 <p class="checklist-subtitle">Здоровый образ жизни: Nonnamaxxing</p>
@@ -3111,7 +3123,7 @@
             </div>
         </section>
         <!-- ================= СЕКЦИЯ ДОМАШКА ================= -->
-        <section id="homework" class="container">
+        <section id="homework" class="container tab-section">
             <h2 class="section-title">📂 Homework (Домашняя работа)</h2>
 
             <!-- Навигация по типам заданий -->
@@ -3579,6 +3591,27 @@
         <p>Made with love, flour, and a lot of olive oil. 🍅🫒 &copy; 2026 OGE Preparation Course.</p>
     </footer>
     <script>
+        // --- ПЕРЕКЛЮЧЕНИЕ ВЕРХНЕУРОВНЕВЫХ ВКЛАДОК ---
+        function showTab(tabId, linkElement) {
+            document.querySelectorAll('.tab-section').forEach(section => {
+                section.classList.remove('active-tab');
+            });
+
+            const target = document.getElementById(tabId);
+            if (target) {
+                target.classList.add('active-tab');
+            }
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active-nav');
+            });
+            if (linkElement) {
+                linkElement.classList.add('active-nav');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
         // Функция для проверки ответов в конкретном блоке
         function checkAnswers(containerId) {
             const container = document.getElementById(containerId);

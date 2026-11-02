@@ -331,18 +331,15 @@
 
         /* --- НИЖНЯЯ КАРТИНКА --- */
         .bottom-image {
-            width: 100vw; /* Ширина на весь экран */
-            max-width: 100vw;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%); /* Центрируем относительно экрана */
-            height: auto; /* Сохраняем пропорции */
+            width: 100%; 
+            max-width: 100%;
+            height: auto; /
+            display: block;
+            margin: 0 auto 50px auto; 
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             border: 5px solid #fff;
-            margin-bottom: 50px;
-            display: block;
-            box-sizing: border-box; /* Чтобы рамка не создавала скролл */
+            box-sizing: border-box;
         }
 
         /* --- ФУТЕР --- */
@@ -408,6 +405,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            height: max-content;
         }
         .vocab-category h3 {
             color: var(--olive-green);
@@ -415,10 +413,12 @@
             padding-bottom: 10px;
             margin-bottom: 15px;
         }
+        
         .word-cards {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 10px;
+            align-items: start; /* Карточки больше не будут растягиваться в высоту */
         }
         .word-card {
             background-color: var(--flour-white);
@@ -426,10 +426,12 @@
             border-radius: 6px;
             border-left: 4px solid var(--tomato-red);
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column; /* Текст встанет друг под другом */
+            gap: 5px; /* Небольшой отступ между английским и русским */
+            justify-content: center;
             font-size: 0.95rem;
             transition: transform 0.2s;
+            height: max-content; /* Карточка ровно по размеру текста */
         }
         .word-card:hover {
             transform: scale(1.02);
@@ -439,10 +441,12 @@
         .word-card .en {
             font-weight: 600;
             color: var(--bordeaux-wine);
+            line-height: 1.2;
         }
         .word-card .ru {
             color: #666;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            line-height: 1.2;
         }
 
         /* --- СТИЛИ ДЛЯ ЗАДАНИЙ --- */
@@ -1646,7 +1650,10 @@
                         <div class="word-card"><span class="en">exercise</span> <span class="ru">заниматься спортом</span></div>
                         <div class="word-card"><span class="en">overeat</span> <span class="ru">переедать</span></div>
                         <div class="word-card"><span class="en">look after</span> <span class="ru">следить, заботиться</span></div>
-                                        <!-- Adverbs -->
+                    </div> <!-- ✅ Закрыли word-cards (Глаголы) -->
+                </div> <!-- ✅ Закрыли vocab-category (Глаголы) -->
+
+                <!-- Adverbs -->
                 <div class="vocab-category">
                     <h3>Adverbs (Наречия)</h3>
                     <div class="word-cards">
@@ -1689,7 +1696,7 @@
                         <div class="word-card"><span class="en">recover from an illness</span> <span class="ru">оправиться от болезни</span></div>
                     </div>
                 </div>
-            </div>
+            </div> 
         </section>
 
         <!-- ================= СЕКЦИЯ АУДИРОВАНИЕ ================= -->

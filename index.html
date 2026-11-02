@@ -331,13 +331,18 @@
 
         /* --- НИЖНЯЯ КАРТИНКА --- */
         .bottom-image {
-            width: 100%;
-            height: auto; /* Картинка будет подстраивать высоту под ширину */
+            width: 100vw; /* Ширина на весь экран */
+            max-width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%); /* Центрируем относительно экрана */
+            height: auto; /* Сохраняем пропорции */
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             border: 5px solid #fff;
             margin-bottom: 50px;
             display: block;
+            box-sizing: border-box; /* Чтобы рамка не создавала скролл */
         }
 
         /* --- ФУТЕР --- */
@@ -1432,7 +1437,7 @@
             border-color: var(--vintage-gold);
             color: var(--pasta-yellow);
         }
-                /* --- БЛОК ДОПОЛНИТЕЛЬНОГО ПРАВИЛА --- */
+        /* --- БЛОК ДОПОЛНИТЕЛЬНОГО ПРАВИЛА --- */
         .additional-rule {
             background-color: #FFF9F9; /* Легкий красноватый фон */
             border: 2px dashed var(--tomato-red); /* Пунктирная рамка */
@@ -1613,6 +1618,7 @@
                         <div class="word-card"><span class="en">overweight</span> <span class="ru">с лишним весом</span></div>
                         <div class="word-card"><span class="en">balanced</span> <span class="ru">сбалансированный</span></div>
                         <div class="word-card"><span class="en">nutritious</span> <span class="ru">питательный</span></div>
+                        <div class="word-card"><span class="en">nourishing</span> <span class="ru">питательный, сытный</span></div>
                         <div class="word-card"><span class="en">fresh</span> <span class="ru">свежий</span></div>
                         <div class="word-card"><span class="en">harmful</span> <span class="ru">вредный</span></div>
                         <div class="word-card"><span class="en">stressful</span> <span class="ru">стрессовый</span></div>
@@ -1637,6 +1643,50 @@
                         <div class="word-card"><span class="en">work out</span> <span class="ru">тренироваться</span></div>
                         <div class="word-card"><span class="en">take up</span> <span class="ru">начать заниматься</span></div>
                         <div class="word-card"><span class="en">get over</span> <span class="ru">оправиться после болезни</span></div>
+                        <div class="word-card"><span class="en">exercise</span> <span class="ru">заниматься спортом</span></div>
+                        <div class="word-card"><span class="en">overeat</span> <span class="ru">переедать</span></div>
+                        <div class="word-card"><span class="en">look after</span> <span class="ru">следить, заботиться</span></div>
+                                        <!-- Adverbs -->
+                <div class="vocab-category">
+                    <h3>Adverbs (Наречия)</h3>
+                    <div class="word-cards">
+                        <div class="word-card"><span class="en">regularly</span> <span class="ru">регулярно</span></div>
+                        <div class="word-card"><span class="en">healthily</span> <span class="ru">здорово, правильно (о питании)</span></div>
+                        <div class="word-card"><span class="en">seriously</span> <span class="ru">серьёзно</span></div>
+                        <div class="word-card"><span class="en">dangerously</span> <span class="ru">опасно (например, болен)</span></div>
+                        <div class="word-card"><span class="en">daily</span> <span class="ru">ежедневно</span></div>
+                        <div class="word-card"><span class="en">occasionally</span> <span class="ru">иногда, время от времени</span></div>
+                    </div>
+                </div>
+
+                <!-- Phrases -->
+                <div class="vocab-category">
+                    <h3>Phrases (Фразы и выражения)</h3>
+                    <div class="word-cards">
+                        <div class="word-card"><span class="en">keep fit</span> <span class="ru">поддерживать форму</span></div>
+                        <div class="word-card"><span class="en">have a balanced diet</span> <span class="ru">питаться сбалансированно</span></div>
+                        <div class="word-card"><span class="en">lead a healthy lifestyle</span> <span class="ru">вести здоровый образ жизни</span></div>
+                        <div class="word-card"><span class="en">make an appointment with a doctor</span> <span class="ru">записаться к врачу</span></div>
+                        <div class="word-card"><span class="en">have a sore throat</span> <span class="ru">иметь боль в горле</span></div>
+                        <div class="word-card"><span class="en">take medicine</span> <span class="ru">принимать лекарство</span></div>
+                        <div class="word-card"><span class="en">follow a doctor's advice</span> <span class="ru">следовать советам врача</span></div>
+                        <div class="word-card"><span class="en">stay in bed</span> <span class="ru">оставаться в постели</span></div>
+                        <div class="word-card"><span class="en">drink plenty of water</span> <span class="ru">пить много воды</span></div>
+                        <div class="word-card"><span class="en">avoid stress</span> <span class="ru">избегать стресса</span></div>
+                        <div class="word-card"><span class="en">go for a walk / run</span> <span class="ru">ходить на прогулку / пробежку</span></div>
+                        <div class="word-card"><span class="en">be in good / bad shape</span> <span class="ru">быть в хорошей / плохой форме</span></div>
+                        <div class="word-card"><span class="en">get enough sleep</span> <span class="ru">высыпаться</span></div>
+                        <div class="word-card"><span class="en">feel under the weather</span> <span class="ru">чувствовать себя плохо</span></div>
+                        <div class="word-card"><span class="en">junk food</span> <span class="ru">вредная еда</span></div>
+                        <div class="word-card"><span class="en">fast food</span> <span class="ru">фастфуд</span></div>
+                        <div class="word-card"><span class="en">lose weight</span> <span class="ru">худеть</span></div>
+                        <div class="word-card"><span class="en">put on weight</span> <span class="ru">набирать вес</span></div>
+                        <div class="word-card"><span class="en">physical activity</span> <span class="ru">физическая активность</span></div>
+                        <div class="word-card"><span class="en">mental health</span> <span class="ru">психическое здоровье</span></div>
+                        <div class="word-card"><span class="en">morning exercises</span> <span class="ru">утренняя зарядка</span></div>
+                        <div class="word-card"><span class="en">eating habits</span> <span class="ru">пищевые привычки</span></div>
+                        <div class="word-card"><span class="en">catch a cold</span> <span class="ru">простудиться</span></div>
+                        <div class="word-card"><span class="en">recover from an illness</span> <span class="ru">оправиться от болезни</span></div>
                     </div>
                 </div>
             </div>

@@ -2041,6 +2041,7 @@
                 <button class="tab-btn" onclick="openGrammarTopic('topic-3', this)">3. Much / Many / Little / Few</button>
                 <button class="tab-btn" onclick="openGrammarTopic('topic-4', this)">4. Conditionals 0, I</button>
                 <button class="tab-btn" onclick="openGrammarTopic('topic-5', this)">5. Imperatives</button>
+                <button class="tab-btn" onclick="openGrammarTopic('topic-6', this)">🏆 Банк упражнений</button>
             </div>
 
             <!-- ТЕМА 1: Модальные глаголы -->
@@ -2825,6 +2826,140 @@
                 </div>
 
             </div> <!-- Конец темы 5 -->
+
+            <!-- ТЕМА 6: Дополнительные упражнения -->
+            <div id="topic-6" class="grammar-topic-content">
+                <div class="theory-box" style="border-left-color: var(--vintage-gold);">
+                    <h3>🏆 Банк дополнительных упражнений (Mixed Grammar)</h3>
+                    <p>Эти задания помогут закрепить все правила модуля, а также лексику предыдущих блоков. <br>
+                    <strong>Внимание:</strong> При вводе ответов в текстовые поля <u>не ставьте точку в конце предложения</u> и не используйте заглавные буквы без необходимости, если хотите, чтобы автопроверка сработала идеально.</p>
+                </div>
+
+                <!-- Exercise 1 -->
+                <div class="exercise-box" id="ex-extra-1">
+                    <h3>Exercise 1. Choose the correct option</h3>
+                    <p>1. I have <select class="user-select" data-answer="a little"><option value="">...</option><option value="a few">a few</option><option value="a little">a little</option></select> time before my fitness class, so I can drink some water.</p>
+                    <p>2. You <select class="user-select" data-answer="mustn't"><option value="">...</option><option value="mustn't">mustn't</option><option value="don't have to">don't have to</option></select> skip breakfast; it gives you energy for the whole day.</p>
+                    <p>3. How <select class="user-select" data-answer="many"><option value="">...</option><option value="much">much</option><option value="many">many</option></select> vegetables do you eat every day?</p>
+                    <p>4. My doctor gave me some very useful <select class="user-select" data-answer="advice"><option value="">...</option><option value="advice">advice</option><option value="advices">advices</option></select> about my diet.</p>
+                    <p>5. You look exhausted. You <select class="user-select" data-answer="should"><option value="">...</option><option value="should">should</option><option value="mustn't">mustn't</option></select> go to bed earlier tonight.</p>
+                    <p>6. If you <select class="user-select" data-answer="heat"><option value="">...</option><option value="heat">heat</option><option value="will heat">will heat</option></select> ice, it <select class="user-select" data-answer="melts"><option value="">...</option><option value="melts">melts</option><option value="will melt">will melt</option></select>.</p>
+                    <p>7. He usually <select class="user-select" data-answer="plays"><option value="">...</option><option value="plays">plays</option><option value="is playing">is playing</option></select> football on Sundays, but today he is resting.</p>
+                    <p>8. This healthy salad is <select class="user-select" data-answer="tastier"><option value="">...</option><option value="more tasty">more tasty</option><option value="tastier">tastier</option></select> than fast food.</p>
+                    <p>9. He has <select class="user-select" data-answer="little"><option value="">...</option><option value="little">little</option><option value="few">few</option></select> energy today because he didn't sleep well.</p>
+                    <p>10. You <select class="user-select" data-answer="needn't"><option value="">...</option><option value="needn't">needn't</option><option value="mustn't">mustn't</option></select> take these vitamins; you already have enough in your diet.</p>
+                    <button class="btn btn-check" onclick="checkSelects('ex-extra-1')">Проверить</button>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="exercise-box" id="ex-extra-2">
+                    <h3>Exercise 2. Transform the sentences using the word in brackets</h3>
+                    <p>1. If you don't sleep enough, you feel tired. <strong>(unless)</strong><br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="unless you sleep enough you feel tired"></p>
+                    
+                    <p>2. Eat a balanced diet. You will feel energetic. <strong>(and)</strong><br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="eat a balanced diet and you will feel energetic"></p>
+                    
+                    <p>3. You want to lose weight. You should cut down on fast food. <strong>(if)</strong><br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="if you want to lose weight you should cut down on fast food"></p>
+                    
+                    <p>4. Follow a doctor's advice, otherwise you won't recover quickly. <strong>(or)</strong><br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="follow a doctor's advice or you won't recover quickly"></p>
+                    
+                    <p>5. If you don't hurry, you will be late for the doctor. <strong>(unless)</strong><br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="unless you hurry you will be late for the doctor"></p>
+                    
+                    <p>6. Rest. You will feel better. <strong>(and)</strong><br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="rest and you will feel better"></p>
+                    
+                    <p>7. You have a terrible stomach ache. You should go to the doctor. <strong>(if)</strong><br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="if you have a terrible stomach ache you should go to the doctor"></p>
+                    
+                    <p>8. Don't eat junk food, otherwise you will put on weight. <strong>(or)</strong><br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="don't eat junk food or you will put on weight"></p>
+                    
+                    <button class="btn btn-check" onclick="checkAnswers('ex-extra-2')">Проверить</button>
+                    <button class="btn btn-show" onclick="showAnswers('ex-extra-2')">Показать ответы</button>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="exercise-box" id="ex-extra-3">
+                    <h3>Exercise 3. Open the brackets (Zero or First Conditional)</h3>
+                    <p>1. If you <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="heat"> (heat) ice, it <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="melts"> (melt).</p>
+                    <p>2. If I <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="don't finish"> (not / finish) my homework today, I <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="won't go"> (not / go) to the gym tomorrow.</p>
+                    <p>3. If people <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="don't drink"> (not / drink) water, they <input type="text" class="user-input inline-input" style="width: 80px;" data-answer="die"> (die).</p>
+                    <p>4. My coach says we <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="will win"> (win) the competition if we <input type="text" class="user-input inline-input" style="width: 80px;" data-answer="train"> (train) hard.</p>
+                    <p>5. If she <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="catches"> (catch) a cold, she <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="will take"> (take) some medicine.</p>
+                    <p>6. If you <input type="text" class="user-input inline-input" style="width: 80px;" data-answer="mix"> (mix) red and yellow, you <input type="text" class="user-input inline-input" style="width: 80px;" data-answer="get"> (get) orange.</p>
+                    <p>7. I <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="will call"> (call) you if I <input type="text" class="user-input inline-input" style="width: 80px;" data-answer="have"> (have) any symptoms.</p>
+                    <p>8. If you <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="don't sleep"> (not / sleep) enough, you <input type="text" class="user-input inline-input" style="width: 80px;" data-answer="feel"> (feel) exhausted the next day.</p>
+                    <button class="btn btn-check" onclick="checkAnswers('ex-extra-3')">Проверить</button>
+                    <button class="btn btn-show" onclick="showAnswers('ex-extra-3')">Показать ответы</button>
+                </div>
+
+                <!-- Exercise 4 -->
+                <div class="exercise-box" id="ex-extra-4">
+                    <h3>Exercise 4. Find and correct ONE mistake in each sentence</h3>
+                    <p><em>Впишите правильный вариант в поле (только исправленное слово или фразу).</em></p>
+                    <p>1. I don't have <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="much"> (many) time to cook healthy meals every day.</p>
+                    <p>2. You <input type="text" class="user-input inline-input" style="width: 150px;" data-answer="must follow"> (must to follow) the doctor's advice if you want to recover.</p>
+                    <p>3. If you <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="eat"> (will eat) too much junk food, you will feel bad.</p>
+                    <p>4. She has <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="a little"> (a few) money to buy fresh fruit.</p>
+                    <p>5. <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="unless you rest"> (Unless you don't rest), you will get a terrible headache.</p>
+                    <p>6. I enjoy <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="eating"> (to eat) fresh vegetables and fruit.</p>
+                    <p>7. This diet is <input type="text" class="user-input inline-input" style="width: 100px;" data-answer="better"> (more good) for you than fast food.</p>
+                    <p>8. He has a lot of stress, so he <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="should relax"> (should to relax).</p>
+                    <button class="btn btn-check" onclick="checkAnswers('ex-extra-4')">Проверить</button>
+                    <button class="btn btn-show" onclick="showAnswers('ex-extra-4')">Показать ответы</button>
+                </div>
+
+                <!-- Exercise 5 -->
+                <div class="exercise-box" id="ex-extra-5">
+                    <h3>Exercise 5. Word Formation</h3>
+                    <p>1. Fresh vegetables and fruit are very <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="useful"> for your health. (USE)</p>
+                    <p>2. My brother caught a terrible <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="illness"> last winter because he didn't wear a warm coat. (ILL)</p>
+                    <p>3. He is always so <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="energetic"> and cheerful in the morning! (ENERGY)</p>
+                    <p>4. Doing yoga is a great way to reduce <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="stress">. (STRESS)</p>
+                    <p>5. You should not eat <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="unhealthy"> food if you want to keep fit. (HEALTH)</p>
+                    <p>6. I was very <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="unhappy"> when I had to stay in bed for a week. (HAPPY)</p>
+                    <p>7. It is <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="dangerous"> to cross the street when the light is red. (DANGER)</p>
+                    <p>8. We had a <input type="text" class="user-input inline-input" style="width: 120px;" data-answer="wonderful"> time at the fitness centre yesterday. (WONDER)</p>
+                    <button class="btn btn-check" onclick="checkAnswers('ex-extra-5')">Проверить</button>
+                    <button class="btn btn-show" onclick="showAnswers('ex-extra-5')">Показать ответы</button>
+                </div>
+
+                <!-- Exercise 6 -->
+                <div class="exercise-box" id="ex-extra-6">
+                    <h3>Exercise 6. Translate the sentences from Russian into English</h3>
+                    <p>1. Тебе следует добавить больше свежих овощей в свой рацион.<br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="you should add more fresh vegetables to your diet"></p>
+                    
+                    <p>2. Не пропускай завтрак, он дает тебе энергию.<br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="don't skip breakfast it gives you energy"></p>
+                    
+                    <p>3. Если ты ешь слишком много сахара, ты набираешь вес.<br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="if you eat too much sugar you put on weight"></p>
+                    
+                    <p>4. У меня мало времени, чтобы готовить полезную еду каждый день.<br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="i have little time to cook healthy food every day"></p>
+                    
+                    <p>5. Тебе не обязательно ходить в спортзал каждый день, чтобы поддерживать форму.<br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="you don't have to go to the gym every day to keep fit"></p>
+                    
+                    <p>6. Она выглядит уставшей, ей следует отдохнуть.<br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="she looks tired she should rest"></p>
+                    
+                    <p>7. Если ты не будешь высыпаться, ты заболеешь.<br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="if you don't get enough sleep you will get ill"></p>
+                    
+                    <p>8. Если смешать красный и желтый, получится оранжевый.<br>
+                    <input type="text" class="user-input" style="width: 100%; margin-top: 5px;" data-answer="if you mix red and yellow you get orange"></p>
+                    
+                    <button class="btn btn-check" onclick="checkAnswers('ex-extra-6')">Проверить</button>
+                    <button class="btn btn-show" onclick="showAnswers('ex-extra-6')">Показать ответы</button>
+                </div>
+
+            </div> <!-- Конец темы 6 -->    
 
         </section>
         <!-- ================= СЕКЦИЯ СЛОВООБРАЗОВАНИЕ ================= -->
